@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CMa2 Designs About Page</title>
+    <title>CMa2 Designs Contact Page</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
@@ -19,6 +19,35 @@
     <div class="subheading">
         <h2>Contact</h2>
     </div>
+    <table>
+        <colgroup>
+            <col style="background-color: #A4797C50" span="1">
+        </colgroup>
+        <th colspan="2">Contact Methods</th>
+        <tr>
+            <td>Email</td>
+            <td>caitlin.maloney89@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Linkedin</td>
+            <td><a href="https://www.linkedin.com/in/caitlin-maloney-67961418b/" target="_blank">Caitlin Maloney</a></td>
+        </tr>
+        <tr>
+            <td>Github</td>
+            <td><a href="https://github.com/orgs/cma2designs/dashboard" target="_blank">cma2designs</a></td>
+        </tr>
+        <tr>
+            <td>Instagram</td>
+            <td>@maloneycaitlin</td>
+        </tr>
+    </table>
+    <form class="emailcontact" method="post" action="welcome.php">
+        <input type="text" name="name" placeholder="Name..."><br>
+        <input type="text" name="email" placeholder="Email..."><br>
+        <input type="text" name="subject" placeholder="Subject..."><br>
+        <textarea form="emailcontact" rows="5" name="message" placeholder="Message..."></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
     <footer>
         <p class="footername">C&mdash;Ma<sup>2</sup> Designs</p>
         <p class="feedback"><a href="feedback.html">Feedback</a></p>

@@ -39,7 +39,7 @@ nav {
 }
 footer {
     grid-column: span 6;
-    grid-row: 4;
+    grid-row: 5;
 }
 .about {
     grid-column: span 3;
@@ -48,6 +48,22 @@ footer {
 .aboutimg {
     grid-column: span 3;
     grid-row: 3;
+}
+table {
+    grid-column: span 1;
+    grid-row: 3;
+}
+.emailcontact {
+    grid-column: span 5;
+    grid-row: 3;
+}
+.feedbackheader {
+    grid-column: span 6;
+    grid-row: 3;
+}
+.feedbackform {
+    grid-column: span 6;
+    grid-row: 4;
 }
 
 /* boxes */
@@ -133,6 +149,77 @@ p {
     height: auto;
     object-fit: contain;
 }
+table {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-collapse: collapse;
+    margin: 20px;
+    font: 16px/1.5 Verdana, sans-serif;
+    color: #544559;
+}
+th, tr, td {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 2px solid #A4797C;
+    margin: 0;
+}
+th {
+    font: 24px/1.6 Verdana, sans-serif;
+}
+form {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    background-color: #A4797C50;
+}
+input, textarea {
+    width: 97%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid #A4797C;
+    margin: 5px;
+    font: 16px/1.5 Verdana, sans-serif;
+    color: #544559;
+}
+label {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    font: 16px/1.5 Verdana, sans-serif;
+    color: #544559;
+}
+input[type=submit] {
+    width: auto;
+    background-color: #A4797C50;
+}
+.feedbackheader {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    font: 24px/1.5 Verdana, sans-serif;
+    color: #A4797C;
+    text-align: center;
+}
+.likely, input[type=radio] {
+    display: inline-flex;
+    width: 15px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+}
+input[type=radio] {
+    padding: 0;
+    margin: 5px;
+}
 footer {
     width: auto;
     height: auto;
@@ -163,16 +250,16 @@ nav a:link, .feedback a:link {
     color: #3B4D54;
     text-decoration: none;
 }
-nav a:visited, .feedback a:visited {
+nav a:visited, .feedback a:visited, a:visited {
     color: #3B4D54;
 }
-nav a:focus, .feedback a:focus {
+nav a:focus, .feedback a:focus, a:focus {
     background-color: #A4797C;
 }
-nav a:hover, .feedback a:hover {
+nav a:hover, .feedback a:hover, a:hover {
     background-color: #A4797C;
 }
-nav a:active, .feedback a:active {
+nav a:active, .feedback a:active, a:active {
     color: #C4CD8B;
     background-color: #544559;
 }
