@@ -61,7 +61,7 @@ table {
     grid-column: span 6;
     grid-row: 3;
 }
-.feedbackform {
+.googleform {
     grid-column: span 6;
     grid-row: 4;
 }
@@ -106,7 +106,7 @@ nav {
 }
 .ctaintro {
     padding: 10px;
-    font: 28px/1.5 Georgia, serif;
+    font: 28px/1.5 Verdana, sans-serif;
     text-align: center;
 }
 .cta {
@@ -200,25 +200,12 @@ input[type=submit] {
     background-color: #A4797C50;
 }
 .feedbackheader {
-    width: auto;
-    height: auto;
-    padding: 10px;
-    border: none;
-    margin: 10px;
-    font: 24px/1.5 Verdana, sans-serif;
-    color: #A4797C;
     text-align: center;
 }
-.likely, input[type=radio] {
-    display: inline-flex;
-    width: 15px;
+.googleform {
+    width: auto;
     height: auto;
-    padding: 10px;
-    margin: 20px;
-}
-input[type=radio] {
-    padding: 0;
-    margin: 5px;
+    margin: auto;
 }
 footer {
     width: auto;
