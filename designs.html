@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CMa2 Designs Portfolio Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMa2 Designs - Portfolio Page</title>
+    <meta name="description" content="Preview some of my designs created for my portfolio, and my relevant skills and experience in the field of design.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
@@ -11,14 +13,189 @@
         <h1>C&mdash;Ma<sup>2</sup><br>Designs</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="designs.html">Designs</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="designs.html">Designs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
     <div class="subheading">
         <h2>Designs Portfolio</h2>
     </div>
+    <section class="webexamples" class="carousel" aria-label="Gallery">
+        <ol class="viewport">
+            <li id="slide1" tabindex="0" class="slide">
+                <img src="images/wireframe.jpeg" alt="website wireframe example"/>
+                <div class="snapper">
+                    <a href="#slide3" class="previous">Go to last slide</a>
+                    <a href="#slide2" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="slide2" tabindex="0" class="slide">
+                <img src="images/colorpalette.jpg" alt="color palette"/>
+                <div class="snapper">
+                    <a href="#slide1" class="previous">Go to previous slide</a>
+                    <a href="#slide3" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="slide3" tabindex="0" class="slide">
+                <img src="images/layoutboxmodelpractice.jpeg" alt="practice html/css page for box model and layout"/>
+                <div class="snapper lastimg">
+                    <a href="#slide2" class="previous">Go to previous slide</a>
+                    <a href="#slide1" class="next">Go to next slide</a>
+                </div>
+            </li>
+        </ol>
+        <aside class="car-nav">
+            <ol class="car-nav-list">
+                <li class="car-nav-item">
+                    <a href="#slide1" class="car-nav-button">Go to slide 1</a>
+                </li>
+                <li class="car-nav-item">
+                    <a href="#slide2" class="car-nav-button">Go to slide 2</a>
+                </li>
+                <li class="car-nav-item">
+                    <a href="#slide3" class="car-nav-button">Go to slide 3</a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+    <section class="webdesign">
+        <h3>Web Designs Skills and Experience</h3>
+        <ul class="skillsexp">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Research</li>
+            <li>Data Collection</li>
+            <li>Wireframing</li>
+            <li>Color Theory</li>
+            <li>Typography</li>
+        </ul>
+    </section>
+    <section class="graphicexamples" class="carousel" aria-label="Gallery">
+        <ol class="geviewport">
+            <li id="geslide1" tabindex="0" class="geslide">
+                <img src="images/packaging.jpg" alt="coffee packaging design"/>
+                <div class="gesnapper">
+                    <a href="#geslide4" class="previous">Go to last slide</a>
+                    <a href="#geslide2" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="geslide2" tabindex="0" class="geslide">
+                <img src="images/swissposter.jpg" alt="swiss style movie poster"/>
+                <div class="gesnapper">
+                    <a href="#geslide1" class="previous">Go to previous slide</a>
+                    <a href="#geslide3" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="geslide3" tabindex="0" class="geslide">
+                <img src="images/beforeafter.jpg" alt="photo restoration example"/>
+                <div class="gesnapper">
+                    <a href="#geslide2" class="previous">Go to previous slide</a>
+                    <a href="#geslide4" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="geslide4" tabindex="0" class="geslide">
+                <img src="images/letterhead.jpg" alt="business letterhead example"/>
+                <div class="gesnapper lastimg">
+                    <a href="#geslide3" class="previous">Go to previous slide</a>
+                    <a href="#geslide1" class="next">Go to first slide</a>
+                </div>
+            </li>
+        </ol>
+        <aside class="gecar-nav">
+            <ol class="gecar-nav-list">
+                <li class="gecar-nav-item">
+                    <a href="#geslide1" class="gecar-nav-button">Go to slide 1</a>
+                </li>
+                <li class="gecar-nav-item">
+                    <a href="#geslide2" class="gecar-nav-button">Go to slide 2</a>
+                </li>
+                <li class="gecar-nav-item">
+                    <a href="#geslide3" class="gecar-nav-button">Go to slide 3</a>
+                </li>
+                <li class="gecar-nav-item">
+                    <a href="#geslide4" class="gecar-nav-button">Got to slide 4</a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+    <section class="graphicdesign">
+        <h3>Graphic Designs Skills and Experience</h3>
+        <ul class="skillsexp">
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe InDesign</li>
+            <li>Typography</li>
+            <li>Color Theory</li>
+            <li>Art Elements and Design Principles</li>
+            <li>Art Styles</li>
+        </ul>
+    </section>
+    <section class="illusexamples" class="carousel" aria-label="Gallery">
+        <ol class="ieviewport">
+            <li id="ieslide1" tabindex="0" class="ieslide">
+                <img src="images/potatogarlicillus.jpg" alt="potato and garlic illustration"/>
+                <div class="iesnapper">
+                    <a href="#ieslide4" class="previous">Go to last slide</a>
+                    <a href="#ieslide2" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="ieslide2" tabindex="0" class="ieslide">
+                <img src="images/dassieillus.jpg" alt="dassie illustration"/>
+                <div class="iesnapper">
+                    <a href="#ieslide1" class="previous">Go to previous slide</a>
+                    <a href="#ieslide3" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="ieslide3" tabindex="0" class="ieslide">
+                <img src="images/birdillus.jpg" alt="bird in flight illustration"/>
+                <div class="iesnapper">
+                    <a href="#ieslide2" class="previous">Go to previous slide</a>
+                    <a href="#ieslide4" class="next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="ieslide4" tabindex="0" class="ieslide">
+                <img src="images/rocklichenillus.jpg" alt="rock with lichen illustration"/>
+                <div class="iesnapper lastimg">
+                    <a href="#ieslide3" class="previous">Go to previous slide</a>
+                    <a href="#ieslide1" class="next">Go to first slide</a>
+                </div>
+            </li>
+        </ol>
+        <aside class="iecar-nav">
+            <ol class="iecar-nav-list">
+                <li class="iecar-nav-item">
+                    <a href="#ieslide1" class="iecar-nav-button">Go to slide 1</a>
+                </li>
+                <li class="iecar-nav-item">
+                    <a href="#ieslide2" class="iecar-nav-button">Go to slide 2</a>
+                </li>
+                <li class="iecar-nav-item">
+                    <a href="#ieslide3" class="iecar-nav-button">Go to slide 3</a>
+                </li>
+                <li class="iecar-nav-item">
+                    <a href="#ieslide4" class="iecar-nav-button">Got to slide 4</a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+    <section class="illusdesign">
+        <h3>Illustration Skills and Experience</h3>
+        <ul class="skillsexp">
+            <li>Botanical Illustration</li>
+            <li>Drawing Animals in Graphite</li>
+            <li>Contour Drawing</li>
+            <li>Shape in Form</li>
+            <li>Shading Techniques</li>
+            <li>Creating Textures and Values</li>
+            <li>Subject Framing</li>
+            <li>Utilizing Positive and Negative Spaces</li>
+            <li>Art Elements and Design Principles</li>
+            <li>Art Styles</li>
+        </ul>
+    </section>
     <footer>
         <h4 class="footername">C&mdash;Ma<sup>2</sup> Designs</h4>
         <div class="feedback"><a href="feedback.html">Feedback</a></div>
