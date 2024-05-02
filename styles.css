@@ -1,8 +1,19 @@
 html {
     background: #E4E7E7;
 }
-
-@media only screen and (min-width: 50rem) {
+body {
+    background: #E4E7E7;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font: 14px/1.5 Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(5rem, auto);
+}
+@media only screen and (max-width: 50rem) {
     body {
         background: #E4E7E7;
         box-sizing: border-box;
@@ -11,9 +22,6 @@ html {
         margin: 0;
         padding: 0;
         font: 14px/1.5 Verdana, sans-serif;
-        display: grid;
-        grid-template-columns: auto;
-        grid-auto-rows: minmax(5rem, auto);
     }
 }
 
@@ -23,73 +31,182 @@ header {
     grid-column: span 2;
     grid-row: 1;
 }
+@media only screen and (max-width: 50rem) {
+    header {
+        grid-column: span 12;
+        grid-row: 1;
+    }
+}
 nav {
     grid-column: span 10;
     grid-row: 1;
+}
+@media only screen and (max-width: 50rem) {
+    nav {
+        grid-column: span 12;
+        grid-row: 2;
+
+    }
 }
 .subheading {
     grid-column: span 12;
     grid-row: 2;
 }
+@media only screen and (max-width: 50rem) {
+    .subheading {
+        grid-column: span 12;
+        grid-row: 3;
+    }
+}
 .calltoaction {
     grid-column: span 2;
     grid-row: 3;
+}
+@media only screen and (max-width: 50rem) {
+    .calltoaction {
+        grid-column: span 12;
+        grid-row: 4;
+    }
 }
 .carousel {
     grid-column: span 10;
     grid-row: 3;
 }
+@media only screen and (max-width: 50rem) {
+    .carousel {
+        grid-column: span 12;
+        grid-row: 5;
+    }
+}
 .webexamples {
     grid-column: span 10;
     grid-row: 3;
+}
+@media only screen and (max-width: 50rem) {
+    .webexamples {
+        grid-column: span 12;
+        grid-row: 4;
+    }
 }
 .webdesign {
     grid-column: span 2; 
     grid-row: 3;
 }
+@media only screen and (max-width: 50rem) {
+    .webdesign {
+        grid-column: span 12;
+        grid-row: 5;
+    }
+}
 .graphicexamples {
     grid-column: span 10;
     grid-row: 4;
+}
+@media only screen and (max-width: 50rem) {
+    .graphicexamples {
+        grid-column: span 12;
+        grid-row: 6;
+    }
 }
 .graphicdesign {
     grid-column: span 2;
     grid-row: 4;
 }
+@media only screen and (max-width: 50rem) {
+    .graphicdesign {
+        grid-column: span 12;
+        grid-row: 7;
+    }
+}
 .illusexamples {
     grid-column: span 10;
     grid-row: 5;
+}
+@media only screen and (max-width: 50rem) {
+    .illusexamples {
+        grid-column: span 12;
+        grid-row: 8;
+    }
 }
 .illusdesign {
     grid-column: span 2;
     grid-row: 5;
 }
+@media only screen and (max-width: 50rem) {
+    .illusdesign {
+        grid-column: span 12;
+        grid-row: 9;
+    }
+}
 .about {
     grid-column: span 6;
     grid-row: 3;
+}
+@media only screen and (max-width: 50rem) {
+    .about {
+        grid-column: span 12;
+        grid-row: 4;
+    }
 }
 .aboutimg {
     grid-column: span 6;
     grid-row: 3;
 }
+@media only screen and (max-width: 50rem) {
+    .aboutimg {
+        grid-column: span 12;
+        grid-row: 5;
+    }
+}
 table {
     grid-column: span 2;
     grid-row: 3;
+}
+@media only screen and (max-width: 50rem) {
+    table {
+        grid-column: span 12;
+        grid-row: 4;
+    }
 }
 .emailcontact {
     grid-column: span 10;
     grid-row: 3;
 }
+@media only screen and (max-width: 50rem) {
+    .emailcontact {
+        grid-column: span 12;
+        grid-row: 5;
+    }
+}
 .feedbackheader {
     grid-column: span 12;
     grid-row: 3;
+}
+@media only screen and (max-width: 50rem) {
+    .feedbackheader {
+        grid-column: span 12;
+        grid-row: 4;
+    }
 }
 .googleform {
     grid-column: span 12;
     grid-row: 4;
 }
+@media only screen and (max-width: 50rem) {
+    .googleform {
+        grid-column: span 12;
+        grid-row: 5;
+    }
+}
 footer {
     grid-column: span 12;
     grid-row: 6;
+}
+@media only screen and (max-width: 50rem) {
+    footer {
+        grid-column: span 12;
+        grid-row: 10;
+    }
 }
 
 
@@ -103,12 +220,18 @@ h1 {
     font: 2.25rem/1.5 "Major Mono Display", Verdana, sans-serif;
     color: #3B4D54;
 }
+@media only screen and (max-width: 50rem) {
+    h1 {
+        text-align: center;
+    }
+}
 .topnav li {
     display: inline;
 }
 @media only screen and (max-width: 50rem) {
     .topnav li {
         display: block;
+        text-align: center;
     }
     }
 nav {
@@ -128,6 +251,13 @@ nav {
         justify-content: center;
     }
 }
+@media only screen and (max-width: 50rem) {
+    .topnav {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
 .subheading {
     width: 100%;
     height: auto;
@@ -144,6 +274,12 @@ nav {
     padding: 3rem 1rem 1rem 2rem;
     border: none;
     margin: 2rem;
+}
+@media only screen and (max-width: 50rem) {
+    .calltoaction {
+        padding: 1rem;
+        margin: 0;
+    }
 }
 .ctaintro {
     padding: 1rem;
@@ -171,16 +307,39 @@ nav {
     padding-left: 1rem;
     margin-top: 2rem;
 }
+@media only screen and (max-width: 50rem) {
+    .webdesign, .graphicdesign, .illusdesign {
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 50rem) {
+    .webdesign h3, .graphicdesign h3, .illusdesign h3 {
+        text-align: center;
+    }
+}
 .skillsexp li {
     list-style-type: circle;
     font: 1.2rem/1.5 Georgia, serif;
     color: #544559;
+}
+@media only screen and (max-width: 50rem) {
+    .skillsexp li {
+        list-style-position: inside;
+    }
 }
 .about {
     width: 100%;
     height: auto;
     padding: 1rem;
     margin: 1rem;
+}
+@media only screen and (max-width: 50rem) {
+    .about {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
 }
 h3 {
     font: 1.5rem/1.5 Verdana, sans-serif;
@@ -231,6 +390,14 @@ form {
     margin: 1.5rem;
     background-color: #A4797C50;
 }
+@media only screen and (max-width: 50rem) {
+    form {
+        width: 95%;
+        height: auto;
+        margin: .75rem;
+        justify-content: center;
+    }
+}
 input, textarea {
     width: 97%;
     height: auto;
@@ -263,6 +430,13 @@ footer {
     background-size: cover;
     background-image: linear-gradient(to left, #E4E7E7, #C4CD8B);
 }
+@media only screen and (max-width: 50rem) {
+    footer {
+        display: grid;
+        background-color: #C4CD8B;
+        padding: 1rem;
+    }
+}
 .footername {
     float: left;
     width: auto;
@@ -272,10 +446,59 @@ footer {
     font: 1.5rem/1.5 "Major Mono Display", Verdana, sans-serif;
     color: #3B4D54;
 }
+@media only screen and (max-width: 50rem) {
+    .footername {
+        grid-column: span 12;
+        grid-row: 10;
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+}
 .feedback {
     float: right;
     padding: 3rem 1rem .8rem 1rem;
     margin: 0;
+}
+@media only screen and (max-width: 50rem) {
+    .feedback {
+        grid-column: span 12;
+        grid-row: 11;
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+.enlarged {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+.enlarged img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
+.enlarged button {
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    margin: 1rem;
+    font: 1.5rem/1.5 "Major Mono Display", Verdana, sans-serif;
+    color: #3B4D54;
+    text-decoration: none;
+    border: solid .25rem #A4797C;
+    border-radius: .5rem;
+}
+.enlarged button:hover, .enlarged button:focus {
+    background-color: #A4797C;
+}
+.enlarged button:active {
+    color: #C4CD8B;
+    border-color: #544559;
+    background-color: #54455990;
 }
 
 /* navigation */
