@@ -159,7 +159,7 @@ nav {
     }
 }
 table {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: 3;
 }
 @media only screen and (max-width: 50rem) {
@@ -168,12 +168,12 @@ table {
         grid-row: 4;
     }
 }
-.emailcontact {
-    grid-column: span 10;
+.emailform {
+    grid-column: span 9;
     grid-row: 3;
 }
 @media only screen and (max-width: 50rem) {
-    .emailcontact {
+    .emailform {
         grid-column: span 12;
         grid-row: 5;
     }
@@ -208,7 +208,6 @@ footer {
         grid-row: 10;
     }
 }
-
 
 /* boxes */
 
@@ -338,7 +337,6 @@ nav {
     .about {
         margin: 0;
         padding: 1rem;
-        text-align: center;
     }
 }
 h3 {
@@ -363,11 +361,11 @@ p {
     object-fit: contain;
 }
 table {
-    width: auto;
-    height: auto;
-    padding: 1rem;
+    max-width: 100%;
+    height: 10rem;
+    padding: 2rem;
     border-collapse: collapse;
-    margin: 1.5rem;
+    margin: 2.75rem;
     font: 1rem/1.5 Verdana, sans-serif;
     color: #544559;
 }
@@ -381,35 +379,11 @@ th, tr, td {
 th {
     font: 1.5rem/1.5 Verdana, sans-serif;
 }
-form {
-    width: 95%;
-    height: auto;
-    padding: 1rem;
-    border: none;
-    border-radius: 2rem;
-    margin: 1.5rem;
-    background-color: #A4797C50;
-}
-@media only screen and (max-width: 50rem) {
-    form {
-        width: 95%;
-        height: auto;
-        margin: .75rem;
-        justify-content: center;
-    }
-}
-input, textarea {
-    width: 97%;
-    height: auto;
-    padding: .5rem;
-    border: .2rem solid #A4797C;
-    margin: .2rem;
-    font: 1rem/1.5 Verdana, sans-serif;
-    color: #544559;
-}
-input[type=submit] {
-    width: auto;
-    background-color: #A4797C50;
+.emailform iframe {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 2rem;
 }
 .feedbackheader {
     width: 100%;
@@ -512,10 +486,10 @@ nav a:link, .feedback a:link {
 nav a:visited, .feedback a:visited, a:visited {
     color: #3B4D54;
 }
-nav a:focus, .feedback a:focus, a:focus {
+nav a:focus, .feedback a:focus {
     background-color: #A4797C;
 }
-nav a:hover, .feedback a:hover, a:hover {
+nav a:hover, .feedback a:hover {
     background-color: #A4797C;
 }
 nav a:active, .feedback a:active, a:active {
@@ -550,6 +524,8 @@ ol, li {
 }
 .carousel, .webexamples, .graphicexamples, .illusexamples {
     position: relative;
+    width: 100%;
+    height: auto;
     padding-top: 45%;
 }
 .viewport, .geviewport, .ieviewport {
@@ -567,6 +543,8 @@ ol, li {
 .viewport img, .geviewport img, .ieviewport img {
     width: 100%;
     height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     object-fit: contain;
 }
 .slide, .geslide, .ieslide {
