@@ -552,6 +552,19 @@ figcaption {
     border: .25rem solid #544559;
     border-radius: .5rem;
 }
+.moreinfo {
+    font: 1rem/1.5 Georgia, serif;
+    color: #3B4D54;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1rem;
+}
+@media only screen and (max-width: 50rem) {
+    .moreinfo {
+        text-align: center;
+        padding-left: 0;
+    }
+}
 
 /* navigation */
 
