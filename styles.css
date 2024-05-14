@@ -513,13 +513,20 @@ footer {
 .enlarged img {
     width: 100%;
     height: 100vh;
+    padding-top: 2rem;
     object-fit: contain;
+}
+@media only screen and (max-width: 50rem) {
+    .enlarged img {
+        height: auto;
+    }
 }
 .enlarged button, .cta {
     width: auto;
     height: auto;
     padding: .5rem;
     margin: 1rem;
+    margin-bottom: 0;
     font: 1.5rem/1.5 "Major Mono Display", Verdana, sans-serif;
     color: #3B4D54;
     text-decoration: none;
@@ -533,6 +540,17 @@ footer {
     color: #C4CD8B;
     border-color: #544559;
     background-color: #54455990;
+}
+figcaption {
+    width: auto;
+    height: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: .25rem solid #544559;
+    border-radius: .5rem;
 }
 
 /* navigation */
