@@ -284,14 +284,18 @@ nav {
 }
 .subheading {
     width: 100%;
-    height: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    height: 12rem;
+    padding: 1.75rem;
     margin: 0;
+    background-color: #ceb6b6;
+    background-image: url(images/subheading.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
     text-align: center; 
     font: 1rem/1.5 Verdana, sans-serif;
     color: #3B4D54;
-    background-color: #A4797C90;
+    
 }
 .calltoaction {
     width: 100%;
@@ -406,6 +410,8 @@ p {
 .aboutimg img {
     width: 100%;
     height: auto;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     object-fit: contain;
 }
 table {
@@ -457,12 +463,12 @@ th {
 }
 footer {
     width: 100%;
-    height: auto;
-    padding: 0;
+    height: 15rem;
+    padding: 5rem 2rem 0 2rem;
     margin-top: .75rem; 
     background-color: #C4CD8B;
     background-size: cover;
-    background-image: linear-gradient(to left, #E4E7E7, #C4CD8B);
+    background-image: url(images/footerwave.jpg)
 }
 @media only screen and (max-width: 50rem) {
     footer {
@@ -491,7 +497,7 @@ footer {
 }
 .feedback {
     float: right;
-    padding: 3rem 1rem .8rem 1rem;
+    padding: 3.3rem 1rem 1rem 1rem;
     margin: 0;
 }
 @media only screen and (max-width: 50rem) {
