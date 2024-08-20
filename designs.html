@@ -23,57 +23,62 @@
     <div class="subheading">
         <h2>Designs Portfolio</h2>
     </div>
-    <section class="webexamples" class="carousel" aria-label="Gallery">
-        <ol class="viewport">
-            <li id="slide1" tabindex="0" class="slide">
-                <img src="images/websitemockup.jpg" alt="cma2 website mockup"/>
-                <div class="snapper">
-                    <a href="#slide4" class="previous">Go to last slide</a>
-                    <a href="#slide2" class="next">Go to next slide</a>
-                    <a href="websitemockup.html"><img src="images/websitemockup.jpg" alt="cma2 website mockup"/></a>
-                </div>
-            </li>
-            <li id="slide2" tabindex="0" class="slide">
-                <img src="images/wireframe.jpg" alt="website wireframe example"/>
-                <div class="snapper">
-                    <a href="#slide1" class="previous">Go to last slide</a>
-                    <a href="#slide3" class="next">Go to next slide</a>
-                    <a href="wireframe.html"><img src="images/wireframe.jpg" alt="website wireframe example"/></a>
-                </div>
-            </li>
-            <li id="slide3" tabindex="0" class="slide">
-                <img src="images/logo.jpg" alt="logo creation"/>
-                <div class="snapper">
-                    <a href="#slide2" class="previous">Go to previous slide</a>
-                    <a href="#slide4" class="next">Go to next slide</a>
-                    <a href="logo.html"><img src="images/logo.jpg" alt="logo creation"/></a>
-                </div>
-            </li>
-            <li id="slide4" tabindex="0" class="slide">
-                <img src="images/responsive.jpeg" alt="example of responsive web design on mobile screen"/>
-                <div class="snapper lastimg">
-                    <a href="#slide3" class="previous">Go to previous slide</a>
-                    <a href="#slide1" class="next">Go to first slide</a>
-                    <a href="responsive.html"><img src="images/responsive.jpeg" alt="example of responsive design on mobile screen"/></a>
-                </div>
-            </li>
-        </ol>
-        <aside class="car-nav">
-            <ol class="car-nav-list">
-                <li class="car-nav-item">
-                    <a href="#slide1" class="car-nav-button">Go to slide 1</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide2" class="car-nav-button">Go to slide 2</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide3" class="car-nav-button">Go to slide 3</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide4" class="car-nav-button">Go to slide 4</a>
-                </li>
-            </ol>
-        </aside>
+    <section class="carousel-webexamples">
+        <div class="slideshow-webexamples">
+            <div class="mySlides-webexamples webfade">
+                <a href="websitemockup.html"><img src="images/websitemockup.jpg" style="width:100%"></a>
+                <div class="webslidetext">Website Mockup with Responsive Design</div>
+            </div>
+            <div class="mySlides-webexamples webfade">
+                <a href="wireframe.html"><img src="images/wireframe.jpg" style="width:100%"></a>
+                <div class="webslidetext">Wireframe in Adobe Illustrator</div>
+            </div>
+            <div class="mySlides-webexamples webfade">
+                <a href="logo.html"><img src="images/logo.jpg" style="width:100%"></a>
+                <div class="webslidetext">Logo Creation Process</div>
+            </div>
+            <div class="mySlides-webexamples webfade">
+                <a href="responsive.html"><img src="images/responsive.jpeg" style="width:100%"></a>
+                <div class="webslidetext">Responsive Web Design Example</div>
+            </div>
+            <a class="webprev" onclick="webPlusSlides(-1)">&#10094;</a>
+            <a class="webnex" onclick="webPlusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="webdot" onclick="webCurrentSlide(1)"></span>
+            <span class="webdot" onclick="webCurrentSlide(2)"></span>
+            <span class="webdot" onclick="webCurrentSlide(3)"></span>
+            <span class="webdot" onclick="webCurrentSlide(4)"></span>
+        </div>
+        <script>
+            let webSlideIndex = 1;
+            webShowSlides(webSlideIndex);
+
+            function webPlusSlides(n) {
+                webShowSlides(webSlideIndex += n);
+            }
+
+            function webCurrentSlide(n) {
+                webShowSlides(webSlideIndex = n);
+            }   
+
+            function webShowSlides(n) {
+                let i;
+                let webSlides = document.getElementsByClassName("mySlides-webexamples");
+                let webDots= document.getElementsByClassName("webdot");
+                if (n > webSlides.length) {webSlideIndex = 1}
+                if (n < 1) {webSlideIndex = webSlides.length}
+                for (i = 0; i < webSlides.length; i++) {
+                    webSlides[i].style.display = "none";
+                }
+                for (i = 0; i < webDots.length; i++) {
+                    webDots[i].className = webDots[i].className.replace(" active", "");
+                }
+                webSlides[webSlideIndex-1].style.display = "block";
+                webDots[webSlideIndex-1].className += " active";
+            }
+        </script>
     </section>
     <section class="webdesign">
         <h3>Web Designs Skills and Experience</h3>
@@ -90,68 +95,67 @@
             <li>Typography</li>
         </ul>
     </section>
-    <section class="graphicexamples" class="carousel" aria-label="Gallery">
-        <ol class="geviewport">
-            <li id="geslide1" tabindex="0" class="geslide">
-                <img src="images/packaging.jpg" alt="coffee packaging design"/>
-                <div class="gesnapper">
-                    <a href="#geslide5" class="previous">Go to last slide</a>
-                    <a href="#geslide2" class="next">Go to next slide</a>
-                    <a href="packaging.html"><img src="images/packaging.jpg" alt="coffee packaging design"/></a>
-                </div>
-            </li>
-            <li id="geslide2" tabindex="0" class="geslide">
-                <img src="images/popsicles.jpg" alt="Popsicles in various art styles"/>
-                <div class="gesnapper">
-                    <a href="#geslide1" class="previous">Go to previous slide</a>
-                    <a href="#geslide3" class="next">Go to next slide</a>
-                    <a href="popsicles.html"><img src="images/popsicles.jpg" alt="Popsicles in various art styles"/></a>
-                </div>
-            </li>
-            <li id="geslide3" tabindex="0" class="geslide">
-                <img src="images/swissposter.jpg" alt="swiss style movie poster"/>
-                <div class="gesnapper">
-                    <a href="#geslide2" class="previous">Go to previous slide</a>
-                    <a href="#geslide4" class="next">Go to next slide</a>
-                    <a href="swissposter.html"><img src="images/swissposter.jpg" alt="swiss style movie poster"/></a>
-                </div>
-            </li>
-            <li id="geslide4" tabindex="0" class="geslide">
-                <img src="images/beforeafter.jpg" alt="photo restoration example"/>
-                <div class="gesnapper">
-                    <a href="#geslide3" class="previous">Go to previous slide</a>
-                    <a href="#geslide5" class="next">Go to next slide</a>
-                    <a href="beforeafter.html"><img src="images/beforeafter.jpg" alt="photo restoration example"/></a>
-                </div>
-            </li>
-            <li id="geslide5" tabindex="0" class="geslide">
-                <img src="images/trifold.jpg" alt="trifold example"/>
-                <div class="gesnapper lastimg">
-                    <a href="#geslide4" class="previous">Go to previous slide</a>
-                    <a href="#geslide1" class="next">Go to first slide</a>
-                    <a href="trifold.html"><img src="images/trifold.jpg" alt="trifold example"/></a>
-                </div>
-            </li>
-        </ol>
-        <aside class="gecar-nav">
-            <ol class="gecar-nav-list">
-                <li class="gecar-nav-item">
-                    <a href="#geslide1" class="gecar-nav-button">Go to slide 1</a>
-                </li>
-                <li class="gecar-nav-item">
-                    <a href="#geslide2" class="gecar-nav-button">Go to slide 2</a>
-                </li>
-                <li class="gecar-nav-item">
-                    <a href="#geslide3" class="gecar-nav-button">Go to slide 3</a>
-                </li>
-                <li class="gecar-nav-item">
-                    <a href="#geslide4" class="gecar-nav-button">Got to slide 4</a>
-                </li>
-                <li class="gecar-nav-item">
-                    <a href="#geslide5" class="gecar-nav-button">Got to slide 5</a>
-                </li>
-            </ol>
-        </aside>
+    <section class="carousel-graphicexamples">
+        <div class="slideshow-graphicexamples">
+            <div class="mySlides-graphicexamples graphicfade">
+                <a href="packaging.html"><img src="images/packaging.jpg" style="width:100%"></a>
+                <div class="graphicslidetext">Coffee Company Packaging</div>
+            </div>
+            <div class="mySlides-graphicexamples graphicfade">
+                <a href="popsicles.html"><img src="images/popsicles.jpg" style="width:100%"></a>
+                <div class="graphicslidetext">Design Style "Popsicle" Series</div>
+            </div>
+            <div class="mySlides-graphicexamples graphicfade">
+                <a href="swissposter.html"><img src="images/swissposter.jpg" style="width:100%"></a>
+                <div class="graphicslidetext">Movie Poster in Swiss Styling</div>
+            </div>
+            <div class="mySlides-graphicexamples graphicfade">
+                <a href="beforeafter.html"><img src="images/beforeafter.jpg" style="width:100%"></a>
+                <div class="graphicslidetext">Photo Restoration</div>
+            </div>
+            <div class="mySlides-graphicexamples graphicfade">
+                <a href="trifold.html"><img src="images/trifold.jpg" style="width:100%"></a>
+                <div class="graphicslidetext">Company Brand Identity Trifold</div>
+            </div>
+            <a class="graphicprev" onclick="graphicPlusSlides(-1)">&#10094;</a>
+            <a class="graphicnex" onclick="graphicPlusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="graphicdot" onclick="graphicCurrentSlide(1)"></span>
+            <span class="graphicdot" onclick="graphicCurrentSlide(2)"></span>
+            <span class="graphicdot" onclick="graphicCurrentSlide(3)"></span>
+            <span class="graphicdot" onclick="graphicCurrentSlide(4)"></span>
+            <span class="graphicdot" onclick="graphicCurrentSlide(5)"></span>
+        </div>
+        <script>
+            let graphicSlideIndex = 1;
+            graphicShowSlides(graphicSlideIndex);
+
+            function graphicPlusSlides(n) {
+                graphicShowSlides(graphicSlideIndex += n);
+            }
+
+            function graphicCurrentSlide(n) {
+                graphicShowSlides(graphicSlideIndex = n);
+            }   
+
+            function graphicShowSlides(n) {
+                let i;
+                let graphicSlides = document.getElementsByClassName("mySlides-graphicexamples");
+                let graphicDots = document.getElementsByClassName("graphicdot");
+                if (n > graphicSlides.length) {graphicSlideIndex = 1}
+                if (n < 1) {graphicSlideIndex = graphicSlides.length}
+                for (i = 0; i < graphicSlides.length; i++) {
+                    graphicSlides[i].style.display = "none";
+                }
+                for (i = 0; i < graphicDots.length; i++) {
+                    graphicDots[i].className = graphicDots[i].className.replace(" active", "");
+                }
+                graphicSlides[graphicSlideIndex-1].style.display = "block";
+                graphicDots[graphicSlideIndex-1].className += " active";
+            }
+        </script>
     </section>
     <section class="graphicdesign">
         <h3>Graphic Designs Skills and Experience</h3>
@@ -165,58 +169,63 @@
             <li>Art Elements and Design Principles</li>
             <li>Art Styles</li>
         </ul>
-    </section>
-    <section class="illusexamples" class="carousel" aria-label="Gallery">
-        <ol class="ieviewport">
-            <li id="ieslide1" tabindex="0" class="ieslide">
-                <img src="images/potatogarlicillus.jpg" alt="potato and garlic illustration"/>
-                <div class="iesnapper">
-                    <a href="#ieslide4" class="previous">Go to last slide</a>
-                    <a href="#ieslide2" class="next">Go to next slide</a>
-                    <a href="potatogarlic.html"><img src="images/potatogarlicillus.jpg" alt="potato and garlic illustration"/></a>
-                </div>
-            </li>
-            <li id="ieslide2" tabindex="0" class="ieslide">
-                <img src="images/dassieillus.jpg" alt="dassie illustration"/>
-                <div class="iesnapper">
-                    <a href="#ieslide1" class="previous">Go to previous slide</a>
-                    <a href="#ieslide3" class="next">Go to next slide</a>
-                    <a href="dassie.html"><img src="images/dassieillus.jpg" alt="dassie illustration"/></a>
-                </div>
-            </li>
-            <li id="ieslide3" tabindex="0" class="ieslide">
-                <img src="images/birdillus.jpg" alt="bird in flight illustration"/>
-                <div class="iesnapper">
-                    <a href="#ieslide2" class="previous">Go to previous slide</a>
-                    <a href="#ieslide4" class="next">Go to next slide</a>
-                    <a href="birdflying.html"><img src="images/birdillus.jpg" alt="bird in flight illustration"/></a>
-                </div>
-            </li>
-            <li id="ieslide4" tabindex="0" class="ieslide">
-                <img src="images/rocklichenillus.jpg" alt="rock with lichen illustration"/>
-                <div class="iesnapper lastimg">
-                    <a href="#ieslide3" class="previous">Go to previous slide</a>
-                    <a href="#ieslide1" class="next">Go to first slide</a>
-                    <a href="rocklichen.html"><img src="images/rocklichenillus.jpg" alt="rock with lichen illustration"></a>
-                </div>
-            </li>
-        </ol>
-        <aside class="iecar-nav">
-            <ol class="iecar-nav-list">
-                <li class="iecar-nav-item">
-                    <a href="#ieslide1" class="iecar-nav-button">Go to slide 1</a>
-                </li>
-                <li class="iecar-nav-item">
-                    <a href="#ieslide2" class="iecar-nav-button">Go to slide 2</a>
-                </li>
-                <li class="iecar-nav-item">
-                    <a href="#ieslide3" class="iecar-nav-button">Go to slide 3</a>
-                </li>
-                <li class="iecar-nav-item">
-                    <a href="#ieslide4" class="iecar-nav-button">Got to slide 4</a>
-                </li>
-            </ol>
-        </aside>
+    </section>   
+    <section class="carousel-illusexamples">
+        <div class="slideshow-illusexamples">
+            <div class="mySlides-illusexamples illusfade">
+                <a href="potatogarlic.html"><img src="images/potatogarlicillus.jpg" style="width:100%"></a>
+                <div class="illusslidetext">Potato and Garlic</div>
+            </div>
+            <div class="mySlides-illusexamples illusfade">
+                <a href="dassie.html"><img src="images/dassieillus.jpg" style="width:100%"></a>
+                <div class="illusslidetext">Dassie</div>
+            </div>
+            <div class="mySlides-illusexamples illusfade">
+                <a href="birdflying.html"><img src="images/birdillus.jpg" style="width:100%"></a>
+                <div class="illusslidetext">Bird in Flight</div>
+            </div>
+            <div class="mySlides-illusexamples illusfade">
+                <a href="rocklichen.html"><img src="images/rocklichenillus.jpg" style="width:100%"></a>
+                <div class="illusslidetext">Rock and Lichen</div>
+            </div>
+            <a class="illusprev" onclick="illusPlusSlides(-1)">&#10094;</a>
+            <a class="illusnex" onclick="illusPlusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="illusdot" onclick="illusCurrentSlide(1)"></span>
+            <span class="illusdot" onclick="illusCurrentSlide(2)"></span>
+            <span class="illusdot" onclick="illusCurrentSlide(3)"></span>
+            <span class="illusdot" onclick="illusCurrentSlide(4)"></span>
+        </div>
+        <script>
+            let illusSlideIndex = 1;
+            illusShowSlides(illusSlideIndex);
+
+            function illusPlusSlides(n) {
+                illusShowSlides(illusSlideIndex += n);
+            }
+
+            function illusCurrentSlide(n) {
+                illusShowSlides(illusSlideIndex = n);
+            }   
+
+            function illusShowSlides(n) {
+                let i;
+                let illusSlides = document.getElementsByClassName("mySlides-illusexamples");
+                let illusDots= document.getElementsByClassName("illusdot");
+                if (n > illusSlides.length) {illusSlideIndex = 1}
+                if (n < 1) {illusSlideIndex = illusSlides.length}
+                for (i = 0; i < illusSlides.length; i++) {
+                    illusSlides[i].style.display = "none";
+                }
+                for (i = 0; i < illusDots.length; i++) {
+                    illusDots[i].className = illusDots[i].className.replace(" active", "");
+                }
+                illusSlides[illusSlideIndex-1].style.display = "block";
+                illusDots[illusSlideIndex-1].className += " active";
+            }
+        </script>
     </section>
     <section class="illusdesign">
         <h3>Illustration Skills and Experience</h3>
@@ -241,57 +250,62 @@
         <p class="cpsum">For this reason this typeface is best used as a display type, given it's more bold nature in it's design qualities. It would also suit any usage that feels more art and creative forward such as: craft drinks, goods or services that would be considered creative in their take on their particular product, or informational websites, leaflets, or the like, with creative or art forward content.</p>
         <p class="cpsum">I'm excited to keep working on this typeface. I know that in many of Mondrian's works he utilizes the primary colors red, yellow, and blue. I'd love to work these into the typeface as well, as one of the optional iterations.</p>
     </section>
-    <section class="cpexamples" class="carousel" aria-label="Gallery">
-        <ol class="cpviewport">
-            <li id="cpslide1" tabindex="0" class="cpslide">
-                <img src="images/mockupcocktails.jpg" alt="cocktail menu mockup"/>
-                <div class="cpsnapper">
-                    <a href="#cpslide4" class="previous">Go to last slide</a>
-                    <a href="#cpslide2" class="next">Go to next slide</a>
-                    <a href="mockupcocktails.html"><img src="images/mockupcocktails.jpg" alt="cocktail menu mockup"/></a>
-                </div>
-            </li>
-            <li id="cpslide2" tabindex="0" class="cpslide">
-                <img src="images/mockupdesigns.jpg" alt="merchandise tag mockup"/>
-                <div class="cpsnapper">
-                    <a href="#cpslide1" class="previous">Go to previous slide</a>
-                    <a href="#cpslide3" class="next">Go to next slide</a>
-                    <a href="mockupdesigns.html"><img src="images/mockupdesigns.jpg" alt="merchandise tag mockup"/></a>
-                </div>
-            </li>
-            <li id="cpslide3" tabindex="0" class="cpslide">
-                <img src="images/hocnavpub.jpg" alt="final illustration of typeface"/>
-                <div class="cpsnapper">
-                    <a href="#cpslide2" class="previous">Go to previous slide</a>
-                    <a href="#cpslide4" class="next">Go to next slide</a>
-                    <a href="hocnavpub.html"><img src="images/hocnavpub.jpg" alt="final illustration of typeface"/></a>
-                </div>
-            </li>
-            <li id="cpslide4" tabindex="0" class="cpslide">
-                <img src="images/finalsketch.jpg" alt="final sketch of typeface"/>
-                <div class="cpsnapper lastimg">
-                    <a href="#cpslide3" class="previous">Go to previous slide</a>
-                    <a href="#cpslide1" class="next">Go to first slide</a>
-                    <a href="finalsketch.html"><img src="images/finalsketch.jpg" alt="final sketch of typeface"></a>
-                </div>
-            </li>
-        </ol>
-        <aside class="cpcar-nav">
-            <ol class="cpcar-nav-list">
-                <li class="cpcar-nav-item">
-                    <a href="#cpslide1" class="cpcar-nav-button">Go to slide 1</a>
-                </li>
-                <li class="cpcar-nav-item">
-                    <a href="#cpslide2" class="cpcar-nav-button">Go to slide 2</a>
-                </li>
-                <li class="cpcar-nav-item">
-                    <a href="#cpslide3" class="cpcar-nav-button">Go to slide 3</a>
-                </li>
-                <li class="cpcar-nav-item">
-                    <a href="#cpslide4" class="cpcar-nav-button">Got to slide 4</a>
-                </li>
-            </ol>
-        </aside>
+    <section class="carousel-cpexamples">
+        <div class="slideshow-cpexamples">
+            <div class="mySlides-cpexamples cpfade">
+                <a href="mockupcocktails.html"><img src="images/mockupcocktails.jpg" style="width:100%"></a>
+                <div class="cpslidetext">Cocktail Menu Mockup</div>
+            </div>
+            <div class="mySlides-cpexamples cpfade">
+                <a href="mockupdesigns.html"><img src="images/mockupdesigns.jpg" style="width:100%"></a>
+                <div class="cpslidetext">Merchandise Label Mockup</div>
+            </div>
+            <div class="mySlides-cpexamples cpfade">
+                <a href="hocnavpub.html"><img src="images/hocnavpub.jpg" style="width:100%"></a>
+                <div class="cpslidetext">Final Digital for HocNavPub</div>
+            </div>
+            <div class="mySlides-cpexamples cpfade">
+                <a href="finalsketch.html"><img src="images/finalsketch.jpg" style="width:100%"></a>
+                <div class="cpslidetext">Final Sketch of HocNavPub</div>
+            </div>
+            <a class="cpprev" onclick="cpPlusSlides(-1)">&#10094;</a>
+            <a class="cpnex" onclick="cpPlusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="cpdot" onclick="cpCurrentSlide(1)"></span>
+            <span class="cpdot" onclick="cpCurrentSlide(2)"></span>
+            <span class="cpdot" onclick="cpCurrentSlide(3)"></span>
+            <span class="cpdot" onclick="cpCurrentSlide(4)"></span>
+        </div>
+        <script>
+            let cpSlideIndex = 1;
+            cpShowSlides(cpSlideIndex);
+
+            function cpPlusSlides(n) {
+                cpShowSlides(cpSlideIndex += n);
+            }
+
+            function cpCurrentSlide(n) {
+                cpShowSlides(cpSlideIndex = n);
+            }   
+
+            function cpShowSlides(n) {
+                let i;
+                let cpSlides = document.getElementsByClassName("mySlides-cpexamples");
+                let cpDots= document.getElementsByClassName("cpdot");
+                if (n > cpSlides.length) {cpSlideIndex = 1}
+                if (n < 1) {cpSlideIndex = cpSlides.length}
+                for (i = 0; i < cpSlides.length; i++) {
+                    cpSlides[i].style.display = "none";
+                }
+                for (i = 0; i < cpDots.length; i++) {
+                    cpDots[i].className = cpDots[i].className.replace(" active", "");
+                }
+                cpSlides[cpSlideIndex-1].style.display = "block";
+                cpDots[cpSlideIndex-1].className += " active";
+            }
+        </script>
     </section>
     <footer>
         <h4 class="footername">C&mdash;Ma<sup>2</sup> Designs</h4>

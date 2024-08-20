@@ -25,59 +25,66 @@
     </div>
     <section class="calltoaction">
         <h3 class="ctaintro">Explore to learn<br>more about my<br>background and skills.</h3>
-        <button class="cta" onclick="window.location.href='contact.html';">Contact me<br>for design services.</button>
     </section>
-    <section class="carousel" aria-label="Gallery">
-        <ol class="viewport">
-            <li id="slide1" tabindex="0" class="slide">
-                <img src="images/modern.jpg" alt="modern style poster"/>
-                <div class="snapper">
-                    <a href="#slide4" class="previous">Go to last slide</a>
-                    <a href="#slide2" class="next">Go to next slide</a>
-                    <a href="modern.html"><img src="images/modern.jpg" alt="modern style poster"/></a>
-                </div>
-            </li>
-            <li id="slide2" tabindex="0" class="slide">
-                <img src="images/penink.jpg" alt="pen and ink sketches"/>
-                <div class="snapper">
-                    <a href="#slide1" class="previous">Go to previous slide</a>
-                    <a href="#slide3" class="next">Go to next slide</a>
-                    <a href="penink.html"><img src="images/penink.jpg" alt="pen and ink sketches"/></a>
-                </div>
-            </li>
-            <li id="slide3" tabindex="0" class="slide">
-                <img src="images/branding.jpg" alt="company branding example"/>
-                <div class="snapper">
-                    <a href="#slide2" class="previous">Go to previous slide</a>
-                    <a href="#slide4" class="next">Go to next slide</a>
-                    <a href="branding.html"><img src="images/branding.jpg" alt="company branding example"/></a>
-                </div>
-            </li>
-            <li id="slide4" tabindex="0" class="slide">
-                <img src="images/sketches.jpg" alt="graphite sketches"/>
-                <div class="snapper lastimg">
-                    <a href="#slide3" class="previous">Go to previous slide</a>
-                    <a href="#slide1" class="next">Go to first slide</a>
-                    <a href="sketches.html"><img src="images/sketches.jpg" alt="graphite sketches"></a>
-                </div>
-            </li>
-        </ol>
-        <aside class="car-nav">
-            <ol class="car-nav-list">
-                <li class="car-nav-item">
-                    <a href="#slide1" class="car-nav-button">Go to slide 1</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide2" class="car-nav-button">Go to slide 2</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide3" class="car-nav-button">Go to slide 3</a>
-                </li>
-                <li class="car-nav-item">
-                    <a href="#slide4" class="car-nav-button">Got to slide 4</a>
-                </li>
-            </ol>
-        </aside>
+    <section class="carousel-homepage">
+        <div class="slideshow-homepage">
+            <div class="mySlides-homepage fade">
+                <a href="modern.html"><img src="images/modern.jpg" style="width:100%"></a>
+                <div class="slidetext">Modern Style Museum Exhibit Poster</div>
+            </div>
+            <div class="mySlides-homepage fade">
+                <a href="penink.html"><img src="images/penink.jpg" style="width:100%"></a>
+                <div class="slidetext">Pen and Ink Illustrated Series</div>
+            </div>
+            <div class="mySlides-homepage fade">
+                <a href="branding.html"><img src="images/branding.jpg" style="width:100%"></a>
+                <div class="slidetext">Company Brand Identity</div>
+            </div>
+            <div class="mySlides-homepage fade">
+                <a href="sketches.html"><img src="images/sketches.jpg" style="width:100%"></a>
+                <div class="slidetext">Graphite Sketches</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nex" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }   
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides-homepage");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+    <section class="ctabutton">
+        <button class="cta" onclick="window.location.href='contact.html';">Contact me<br>for design services.</button>
     </section>
     <footer>
         <h4 class="footername">C&mdash;Ma<sup>2</sup> Designs</h4>
