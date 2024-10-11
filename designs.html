@@ -51,34 +51,7 @@
             <span class="webdot" onclick="webCurrentSlide(3)"></span>
             <span class="webdot" onclick="webCurrentSlide(4)"></span>
         </div>
-        <script>
-            let webSlideIndex = 1;
-            webShowSlides(webSlideIndex);
-
-            function webPlusSlides(n) {
-                webShowSlides(webSlideIndex += n);
-            }
-
-            function webCurrentSlide(n) {
-                webShowSlides(webSlideIndex = n);
-            }   
-
-            function webShowSlides(n) {
-                let i;
-                let webSlides = document.getElementsByClassName("mySlides-webexamples");
-                let webDots= document.getElementsByClassName("webdot");
-                if (n > webSlides.length) {webSlideIndex = 1}
-                if (n < 1) {webSlideIndex = webSlides.length}
-                for (i = 0; i < webSlides.length; i++) {
-                    webSlides[i].style.display = "none";
-                }
-                for (i = 0; i < webDots.length; i++) {
-                    webDots[i].className = webDots[i].className.replace(" active", "");
-                }
-                webSlides[webSlideIndex-1].style.display = "block";
-                webDots[webSlideIndex-1].className += " active";
-            }
-        </script>
+        <script src="web-slide-script.js"></script>
     </section>
     <section class="webdesign">
         <h3>Web Designs Skills and Experience</h3>
@@ -128,34 +101,7 @@
             <span class="graphicdot" onclick="graphicCurrentSlide(4)"></span>
             <span class="graphicdot" onclick="graphicCurrentSlide(5)"></span>
         </div>
-        <script>
-            let graphicSlideIndex = 1;
-            graphicShowSlides(graphicSlideIndex);
-
-            function graphicPlusSlides(n) {
-                graphicShowSlides(graphicSlideIndex += n);
-            }
-
-            function graphicCurrentSlide(n) {
-                graphicShowSlides(graphicSlideIndex = n);
-            }   
-
-            function graphicShowSlides(n) {
-                let i;
-                let graphicSlides = document.getElementsByClassName("mySlides-graphicexamples");
-                let graphicDots = document.getElementsByClassName("graphicdot");
-                if (n > graphicSlides.length) {graphicSlideIndex = 1}
-                if (n < 1) {graphicSlideIndex = graphicSlides.length}
-                for (i = 0; i < graphicSlides.length; i++) {
-                    graphicSlides[i].style.display = "none";
-                }
-                for (i = 0; i < graphicDots.length; i++) {
-                    graphicDots[i].className = graphicDots[i].className.replace(" active", "");
-                }
-                graphicSlides[graphicSlideIndex-1].style.display = "block";
-                graphicDots[graphicSlideIndex-1].className += " active";
-            }
-        </script>
+        <script src="graphic-slide-script.js"></script>
     </section>
     <section class="graphicdesign">
         <h3>Graphic Designs Skills and Experience</h3>
@@ -198,34 +144,7 @@
             <span class="illusdot" onclick="illusCurrentSlide(3)"></span>
             <span class="illusdot" onclick="illusCurrentSlide(4)"></span>
         </div>
-        <script>
-            let illusSlideIndex = 1;
-            illusShowSlides(illusSlideIndex);
-
-            function illusPlusSlides(n) {
-                illusShowSlides(illusSlideIndex += n);
-            }
-
-            function illusCurrentSlide(n) {
-                illusShowSlides(illusSlideIndex = n);
-            }   
-
-            function illusShowSlides(n) {
-                let i;
-                let illusSlides = document.getElementsByClassName("mySlides-illusexamples");
-                let illusDots= document.getElementsByClassName("illusdot");
-                if (n > illusSlides.length) {illusSlideIndex = 1}
-                if (n < 1) {illusSlideIndex = illusSlides.length}
-                for (i = 0; i < illusSlides.length; i++) {
-                    illusSlides[i].style.display = "none";
-                }
-                for (i = 0; i < illusDots.length; i++) {
-                    illusDots[i].className = illusDots[i].className.replace(" active", "");
-                }
-                illusSlides[illusSlideIndex-1].style.display = "block";
-                illusDots[illusSlideIndex-1].className += " active";
-            }
-        </script>
+        <script src="illus-slide-script.js"></script>
     </section>
     <section class="illusdesign">
         <h3>Illustration Skills and Experience</h3>
@@ -278,34 +197,7 @@
             <span class="cpdot" onclick="cpCurrentSlide(3)"></span>
             <span class="cpdot" onclick="cpCurrentSlide(4)"></span>
         </div>
-        <script>
-            let cpSlideIndex = 1;
-            cpShowSlides(cpSlideIndex);
-
-            function cpPlusSlides(n) {
-                cpShowSlides(cpSlideIndex += n);
-            }
-
-            function cpCurrentSlide(n) {
-                cpShowSlides(cpSlideIndex = n);
-            }   
-
-            function cpShowSlides(n) {
-                let i;
-                let cpSlides = document.getElementsByClassName("mySlides-cpexamples");
-                let cpDots= document.getElementsByClassName("cpdot");
-                if (n > cpSlides.length) {cpSlideIndex = 1}
-                if (n < 1) {cpSlideIndex = cpSlides.length}
-                for (i = 0; i < cpSlides.length; i++) {
-                    cpSlides[i].style.display = "none";
-                }
-                for (i = 0; i < cpDots.length; i++) {
-                    cpDots[i].className = cpDots[i].className.replace(" active", "");
-                }
-                cpSlides[cpSlideIndex-1].style.display = "block";
-                cpDots[cpSlideIndex-1].className += " active";
-            }
-        </script>
+        <script src="cp-slide-script.js"></script>
     </section>
     <footer>
         <h4 class="footername">C&mdash;Ma<sup>2</sup> Designs</h4>
